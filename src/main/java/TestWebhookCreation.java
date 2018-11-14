@@ -35,10 +35,10 @@ public class TestWebhookCreation {
     JSONObject JSON = JSONObject.fromObject(request);
     BasicCredentials creds = new BasicCredentials("pooja.singhal", "tulara@335");
     JiraClient jira = new JiraClient("http://localhost:8080", creds);
-    JSON resp =  jira.getRestClient().post(new URI("http://localhost:8080/rest/webhooks/1.0/webhook/"),JSON);
-    System.out.println(resp.toString());
+//    JSON resp =  jira.getRestClient().post(new URI("http://localhost:8080/rest/webhooks/1.0/webhook/"),JSON);
+//    System.out.println(resp.toString());
 
-
+   jira.getRestClient().delete(new URI("http://localhost:8080/rest/webhooks/1.0/webhook/13"));
 
   }
 }
